@@ -1,0 +1,503 @@
+/* Home.css */
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 4rem; /* Increased font size for prominence */
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 1.8rem; /* Increased font size for better readability */
+  margin: 1rem 0;
+}
+
+.learn-more-btn {
+  padding: 12px 24px; /* Increased padding for buttons */
+  background-color: #ff6f61;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 1.2rem; /* Increased font size */
+}
+
+.learn-more-btn:hover {
+  background-color: #ff4f3b;
+}
+
+/* WHY CHOOSE US Section */
+.highlights {
+  padding: 100px 50px;
+  background-color: #d9d6d6;
+  text-align: center;
+}
+
+.highlights h2 {
+  font-size: 3.2rem;
+  color: #0a2a66;
+  margin-bottom: 60px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Card Design */
+.card {
+  border-radius: 20px;
+  padding: 50px 35px;
+  width: 360px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Individual Card Backgrounds */
+.card:nth-child(1) {
+  background: linear-gradient(135deg, #89ee6a, #423d38); /* Green Gradient */
+}
+
+.card:nth-child(2) {
+  background: linear-gradient(135deg, #ffa05b, #423d38); /* Violet Gradient */
+}
+
+.card:nth-child(3) {
+  background: linear-gradient(135deg, #89ee6a, #423d38); /* Light Green Gradient */
+}
+
+/* Icon Styling */
+.card-icon {
+  margin-bottom: 30px;
+}
+
+.card-icon img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-icon img {
+  transform: scale(1.05);
+}
+
+/* Text Styling */
+.card h3 {
+  font-size: 1.9rem;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 90%;
+  margin: 0 auto;
+  color: #fdfdfd;
+}
+
+/* Animation on scroll */
+.card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.25);
+}
+
+/* Hover ripple effect */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .highlights h2 {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    width: 90%;
+    padding: 40px 25px;
+  }
+
+  .card-icon img {
+    width: 100px;
+    height: 100px;
+  }
+}
+:root {
+  --color-bg: #ffffff;
+  --color-primary: #1a73e8; /* professional blue accent */
+  --color-primary-light: #dbe9fb;
+  --color-text-dark: #222222;
+  --color-text-muted: #555555;
+  --color-shadow-light: rgba(26, 115, 232, 0.15);
+  --color-shadow-dark: rgba(0, 0, 0, 0.1);
+  --color-scrollbar-thumb: #a0a0a0;
+  --color-scrollbar-thumb-hover: #4a6ef5;
+}
+
+/* --- EDUCATIONAL PROGRAMS CAROUSEL --- */
+.programs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(90deg, var(--color-primary-light) 0%, #f5f8ff 100%);
+  border-radius: 24px;
+  box-shadow: 0 6px 18px var(--color-shadow-dark);
+}
+
+.program-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--color-bg);
+  box-shadow:
+    0 8px 24px var(--color-shadow-dark),
+    0 2px 8px var(--color-shadow-light);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+  cursor: pointer;
+}
+
+.program-card:hover {
+  box-shadow:
+    0 16px 40px rgba(26, 115, 232, 0.35),
+    0 6px 20px var(--color-shadow-dark);
+  transform: translateY(-6px) scale(1.02);
+  z-index: 1;
+}
+
+.program-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(60%);
+  transition: filter 0.4s ease, transform 0.4s ease;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.program-card:hover .program-image {
+  filter: brightness(100%);
+  transform: scale(1.05);
+}
+
+.program-text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  color: var(--color-bg);
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 90%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.program-text-overlay h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+}
+
+.program-text-overlay p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  font-weight: 500;
+  opacity: 0.95;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* --- FACILITIES ROUND CARDS --- */
+/* --- FACILITIES ROUND CARDS --- */
+.facilities-round-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem; /* Slightly bigger gap */
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #e0f2f1, #fff); /* Soft teal gradient */
+  border-radius: 28px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Softer shadow */
+}
+
+.facility-round-card {
+  background: linear-gradient(145deg, #ffffff, #d6f0f0); /* subtle light gradient */
+  border-radius: 24px;
+  width: 220px; /* Slightly wider */
+  height: 270px; /* taller for better spacing */
+  padding: 2rem 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  cursor: pointer;
+  transition: 
+    background-color 0.4s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+}
+
+.facility-round-card:hover {
+  background: linear-gradient(145deg, #b2dfdb, #80cbc4);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 14px 0px rgba(26, 115, 232, 0.35);
+}
+
+.facility-round-icon {
+  width: 130px; /* bigger */
+  height: 130px; /* bigger */
+  object-fit: contain;
+  margin-bottom: 1.25rem;
+  filter: drop-shadow(0 4px 6px rgba(26, 115, 232, 0.5)) saturate(1.2) brightness(1.1);
+  transition: 
+    filter 0.4s ease,
+    transform 0.4s ease;
+  align-self: center;
+}
+
+.facility-round-card:hover .facility-round-icon {
+  filter: drop-shadow(0 6px 8px rgba(26, 115, 232, 0.9)) saturate(1.5) brightness(1.2);
+  transform: scale(1.1);
+}
+
+.facility-round-card h3 {
+  font-size: 1.7rem;
+  margin: 0.5rem 0 0.7rem 0;
+  font-weight: 700;
+  color: #004d40; /* Deep teal */
+  line-height: 1.2;
+  transition: color 0.4s ease;
+}
+
+.facility-round-card:hover h3 {
+  color: #00796b; /* Brighter teal */
+}
+
+.facility-round-card p {
+  font-size: 1.1rem;
+  color: #336b63; /* Muted teal */
+  margin: 0;
+  line-height: 1.5;
+  max-width: 160px;
+  font-weight: 600;
+  opacity: 0.95;
+  transition: color 0.4s ease;
+}
+
+.facility-round-card:hover p {
+  color: #004d40;
+}
+
+/* CTA Section */
+.cta {
+  padding: 60px 20px;
+  background-color: #ff6f61;
+  color: white;
+  text-align: center;
+}
+
+.cta-container h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.2rem;
+}
+
+.primary-btn {
+  background-color: #fff;
+  color: #ff6f61;
+}
+
+.secondary-btn {
+  background-color: #ff4f3b;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.secondary-btn:hover {
+  background-color: #e03e2d;
+}
+
+/* Scroll Animation */
+.scroll-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cards Accessibility */
+.card:focus {
+  outline: 3px solid #ff6f61;
+  outline-offset: 2px;
+  box-shadow: 0 0 10px #ff6f61;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .section-content {
+    flex-direction: column;
+  }
+
+  .image-container {
+    margin: 0 0 30px;
+    width: 100%;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+
+  .cta-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .cta-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    display: block;
+    width: 80%;
+    margin: 12px auto;
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .feature-list li {
+    font-size: 1.1rem;
+  }
+
+  .section-description {
+    font-size: 1.3rem;
+  }
+}
+
+/* Smooth image fade in for animated images */
+.animated-image {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-section.in-view .animated-image {
+  opacity: 1;
+  transform: scale(1);
+}
