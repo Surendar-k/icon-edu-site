@@ -17,6 +17,7 @@ body {
   height: 100vh;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -313,6 +314,85 @@ body {
   opacity: 0.95;
   color: var(--color-text-secondary, #444);
 }
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .programs {
+    padding: 2.5rem 1rem;
+  }
+
+  .program-card {
+    flex-direction: column !important; /* override row/row-reverse for stacking */
+    max-width: 100%;
+  }
+
+  .program-image {
+    width: 100%;
+    height: 250px;
+  }
+
+  .program-text-overlay {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .program-text-overlay h3 {
+    font-size: 1.6rem;
+  }
+
+  .program-text-overlay p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #our-programs-title {
+    font-size: 2.2rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .programs-list {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .program-text-overlay h3 {
+    font-size: 1.4rem;
+  }
+
+  .program-text-overlay p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .programs {
+    padding: 2rem 0.5rem;
+  }
+
+  #our-programs-title {
+    font-size: 1.8rem;
+    border-bottom-width: 3px;
+  }
+
+  .programs-list {
+    padding: 1rem;
+  }
+
+  .program-image {
+    height: 200px;
+  }
+
+  .program-text-overlay {
+    padding: 1rem;
+  }
+
+  .program-text-overlay h3 {
+    font-size: 1.25rem;
+  }
+
+  .program-text-overlay p {
+    font-size: 0.95rem;
+  }
+}
 
 /* --- FACILITIES ROUND CARDS --- */
 /* Container for the whole section */
@@ -422,22 +502,69 @@ body {
 }
 
 /* Responsive tweaks */
-@media (max-width: 480px) {
-  .facility-round-card {
-    width: 90vw;
-    padding: 2rem 1.5rem 2.8rem;
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .facilities {
+    margin: 3rem auto 4rem;
+    padding: 0 1rem;
   }
-  
+
+  #our-facilities-title {
+    font-size: 2.4rem;
+  }
+
   .facility-round-icon {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .facility-round-card {
+    width: 90%;
+    padding: 2rem 1.2rem 2.5rem;
+  }
+
+  .facility-round-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .facility-round-card p {
+    font-size: 1rem;
+    max-width: 100%;
   }
 }
+
+/* Small screens (mobiles) */
+@media (max-width: 480px) {
+  #our-facilities-title {
+    font-size: 2rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .facility-round-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+  }
+
+  .facility-round-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .facility-round-card p {
+    font-size: 0.95rem;
+  }
+
+  .facilities-round-cards {
+    gap: 2rem;
+  }
+}
+
 /* CTA Section Container */
 .cta {
   background: linear-gradient(135deg, #00796b, #004d40); /* deep teal gradient */
   color: #fff;
-  padding: 4rem 1.5rem;
+  padding: 2.5rem 1rem;
+
   text-align: center;
   border-radius: 24px;
   max-width: 900px;
@@ -541,5 +668,10 @@ body {
     width: 100%;
     min-width: unset;
     padding: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .cta {
+   width: 90%;
   }
 }

@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import './Home.css';
 import homebg from '../../assets/homebg.jpg';
-import digitalLearningImg from '../../assets/homebg.jpg';
-import safeInfrastructureImg from '../../assets/homebg.jpg';
+import digitalLearningImg from '../../assets/digitallearning.png';
+import safeInfrastructureImg from '../../assets/infrastructure.jpg';
 
  // fix the spelling: environemnt → environment
 import primaryEducation from '../../assets/homebg.jpg';

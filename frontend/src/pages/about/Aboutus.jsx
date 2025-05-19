@@ -60,7 +60,7 @@ const AboutUs = () => {
            <div className="about-content">
   <h2 id="who-we-are">Who We Are?</h2>
   <p>
-    Icon Nursery & Primary School, established in 2010, is a trusted institution committed to nurturing young minds through a balanced focus on academics, character, and creativity. We provide a safe, joyful, and stimulating environment where children thrive.
+    Icon Nursery & Primary School, established in 2015, is a trusted institution committed to nurturing young minds through a balanced focus on academics, character, and creativity. We provide a safe, joyful, and stimulating environment where children thrive.
   </p>
   <p>
     At ICON, we offer personalized learning supported by caring, qualified educators who understand each child’s unique strengths. We ensure continuous growth through regular progress monitoring and enrich student life with extracurricular activities that foster creativity, confidence, and collaboration. ICON lays the foundation for lifelong learning and empowers students to become well-rounded individuals ready to succeed in a changing world.

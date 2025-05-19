@@ -3,49 +3,54 @@
   background-color: #f4f6f8;
   color: #1a1a1a;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 .events-hero {
   background: url('../../assets/price.jpg') center/cover no-repeat;
-  height: 60vh;
-  position: relative;
+  min-height: 60vh;
   display: flex;
-  align-items: center;
+  background-attachment: fixed;
+  align-items: flex-end;
   justify-content: center;
   text-align: center;
-  margin-bottom: 3rem;
-  color: #fff;
+  margin: 0 auto 2rem;
+  color: #ffffff;
   animation: fadeIn 1s ease-in-out;
 }
 
 .events-hero .overlay {
-  background-color: rgba(219, 217, 217, 0.282);
-  padding: 3rem;
+  background-color: rgba(63, 60, 60, 0.282);
+  padding: 2.5rem;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .events-hero h1 {
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin: 0;
 }
 
 .events-hero p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   opacity: 0.9;
+  margin-top: 0.5rem;
 }
 
+/* Section Wrapper */
 .section-wrapper {
-  padding: 2.5rem 1.5rem;
+  padding: 2rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .section-wrapper h2 {
   font-size: 2.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
   position: relative;
 }
@@ -65,36 +70,34 @@
 #competitions-section h2 { color: #388e3c; }
 #competitions-section h2::after { background: #388e3c; }
 
-#workshops-section h2 { color: #388e3c; }
-#workshops-section h2::after { background: #388e3c; }
-
+/* Grid Layouts */
 .hex-grid,
 .competition-gallery,
 .circle-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
+/* Cards */
 .hex-card,
 .tilt-card,
 .circle-card {
-  border-radius:16px;
+  border-radius: 16px;
   overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  outline: none;
   animation: fadeInUp 0.6s ease forwards;
 }
 
+/* Card Styling */
 .hex-card {
   background: #fff8f4;
   border: 2px solid #ffe0d2;
   box-shadow: 0 8px 20px rgba(255, 87, 34, 0.05);
 }
-
 .hex-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(255, 87, 34, 0.2);
@@ -105,7 +108,6 @@
   border-left: 6px solid #209503;
   box-shadow: 0 8px 20px rgba(21, 101, 192, 0.05);
 }
-
 .tilt-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(21, 101, 192, 0.2);
@@ -116,57 +118,51 @@
   border: 1px solid #b2dfdb;
   box-shadow: 0 8px 20px rgba(56, 142, 60, 0.05);
 }
-
 .circle-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(56, 142, 60, 0.2);
 }
 
+/* Images */
 .hex-image,
 .tilt-image,
 .circle-image {
   width: 100%;
-  height: 220px;
- 
+  height: 200px;
   object-fit: cover;
   border-bottom: 4px solid transparent;
 }
-
 .hex-image { border-bottom-color: #ff5722; }
 .tilt-image { border-bottom-color: #209503; }
 .circle-image { border-bottom-color: #388e3c; }
 
+/* Content */
 .hex-content,
 .tilt-content,
 .circle-content {
-  padding: 1.25rem 1rem;
-  
+  padding: 1rem;
 }
+
 .hex-inner {
   border-left: 6px solid #ff5722;
 }
-.hex-content h3 {
-  font-size: 1.5rem;
-  color: #ff5722;
-}
 
-.tilt-content h3 {
-  font-size: 1.5rem;
-  color: #209503;
-}
-
+.hex-content h3,
+.tilt-content h3,
 .circle-content h3 {
   font-size: 1.5rem;
-  color: #209503;
+  margin-bottom: 0.5rem;
 }
+.hex-content h3 { color: #ff5722; }
+.tilt-content h3 { color: #209503; }
+.circle-content h3 { color: #209503; }
 
 .hex-content time,
 .tilt-content time,
 .circle-content time {
   font-size: 0.9rem;
   color: #777;
-  display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .hex-content p,
@@ -174,8 +170,10 @@
 .circle-content p {
   font-size: 1rem;
   color: #555;
+  margin: 0;
 }
 
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -191,11 +189,33 @@
     opacity: 1;
   }
 }
-
 @media (max-width: 768px) {
-  .events-hero h1 {
-    font-size: 2.25rem;
+  .events-hero {
+    min-height: 30vh;
+    padding: 0;
+    background-size: cover;
+    background-position: center -70px; /* Moves image up */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    
   }
 
- 
+  .events-hero .overlay {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .events-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .events-hero p {
+    font-size: 1rem;
+  }
+
+  .section-wrapper {
+    padding: 1.5rem 1rem;
+  }
 }

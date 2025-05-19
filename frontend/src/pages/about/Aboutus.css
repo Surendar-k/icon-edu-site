@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  background-attachment: fixed;
   color: white;
   text-align: center;
 }
@@ -22,8 +23,8 @@
   background-color: rgba(63, 60, 60, 0.282);
   padding: 2rem;
   width: 100%;
-  font-family:cursive;
-  font-size:x-large;
+  font-family: cursive;
+  font-size: x-large;
 }
 
 .about-hero h1 {
@@ -34,6 +35,37 @@
 .about-hero p {
   font-size: 1.2rem;
 }
+@media (max-width: 768px) {
+  .about-hero {
+    height: 35vh;
+    padding: 0;
+    background-size: 120%; /* Slight zoom-out */
+    background-position: center 90px; /* Move image upward */
+    background-attachment: fixed;
+    margin-top: -60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlay {
+    padding: 1rem;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    height: 150px ;
+  }
+
+  .about-hero h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
 
 /* Container */
 .container {
@@ -41,6 +73,7 @@
   margin: 0 auto;
   padding: 2rem 1rem;
 }
+
 /* Mission & Vision */
 .mission-vision-section {
   background-color: #f9fcff;
@@ -50,19 +83,19 @@
 .mission-vision-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem; /* Horizontal padding */
+  padding: 0 1rem;
 }
 
 .mission-vision-grid {
   display: flex;
-  justify-content: center; /* Center the items */
+  justify-content: center;
   gap: 2rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .mission-box,
 .vision-box {
-  flex: 0 0 48%;
+  flex: 1 1 300px;
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
@@ -72,7 +105,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 300px;
 }
 
 .mission-box:hover,
@@ -108,42 +140,62 @@
   color: #333;
   line-height: 1.6;
 }
-
 @media (max-width: 768px) {
-  .mission-vision-grid {
-    flex-wrap: wrap;
-    justify-content: center;
+  .mission-vision-section {
+    padding: 1.5rem 1rem 2rem; /* Reduced top padding */
   }
 
   .mission-box,
   .vision-box {
-    flex: 1 1 100%;
+    padding: 1.5rem; /* Optional: Slightly reduce padding inside boxes */
   }
+
+  .mission-box h2,
+  .vision-box h2 {
+    font-size: 1.4rem;
+  }
+
+  .mission-box p,
+  .vision-box p {
+    font-size: 0.95rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+  .mission-vision-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: -20%;
+}
 }
 
 /* About Section */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   align-items: center;
 }
 
 .about-image img {
-  width: 90vh;
+  width: 100%;
   border-radius: 10px;
-  height: 70vh;
-  
+  height: auto;
+  object-fit: cover;
 }
 
 .about-content h2 {
   margin-bottom: 1rem;
   font-family: cursive;
 }
-.about-content p{
+
+.about-content p {
   font-family: cursive;
- 
 }
+
 /* Core Values Section */
 .values-section {
   background-color: #f0f8ff;
@@ -160,21 +212,21 @@
 .values-grid {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 0 2rem;
+  overflow-x: auto;
 }
 
 .value-card {
-  flex: 1;
+  flex: 1 1 250px;
   background: white;
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
   border: 1px solid #ddd;
-  min-width: 0;
+  transition: transform 0.3s ease;
 }
-
 
 .value-card:hover {
   transform: translateY(-5px);
@@ -192,14 +244,13 @@
 
 /* Facilities Section */
 .facilities-section {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 .facilities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
-  margin-top: 1rem;
 }
 
 .facility-card {
@@ -243,7 +294,7 @@
 /* Leadership Section */
 .leadership-team {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 1.5rem;
 }
@@ -275,14 +326,8 @@
   color: #555;
 }
 
-/* Responsive */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .mission-vision-grid,
-  .about-grid,
-  .leadership-team {
-    grid-template-columns: 1fr;
-  }
-
   .about-hero {
     height: 50vh;
     padding: 1rem;
@@ -294,5 +339,29 @@
 
   .about-hero p {
     font-size: 1rem;
+  }
+
+  .overlay {
+    font-size: large;
+    padding: 1rem;
+  }
+
+  .values-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .value-card {
+    width: 100%;
+  }
+
+  .mission-box,
+  .vision-box {
+    padding: 1.5rem;
+  }
+
+  .leader-image img {
+    width: 100px;
+    height: 100px;
   }
 }
