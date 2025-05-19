@@ -9,7 +9,8 @@ import drawing from '../../assets/drawing.jpg';
 import fancydresscompetition from '../../assets/fancydresscompetition.jpg'
 import speechcompetition from '../../assets/speechcompetition.jpg';
 import rhymes from '../../assets/rhymes.jpg';
-import thirukkural from '../../assets/thirukkural.jpg'
+import thirukkural from '../../assets/thirukkural.jpg';
+import quiz from '../../assets/quiz.jpg';
 import './Event.css';
 
 const events = [
@@ -78,7 +79,7 @@ const competitions = [
     title: 'Quiz Competition',
     date: 'January 15, 2025',
     description: 'A fun and competitive event to test students’ knowledge across a variety of subjects through multiple rounds of quizzing.',
-    image: rhymes
+    image: quiz
   },
   {
     id: 4,

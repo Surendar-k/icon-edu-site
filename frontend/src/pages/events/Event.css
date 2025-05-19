@@ -19,14 +19,14 @@
 }
 
 .events-hero .overlay {
-  background-color: rgba(63, 60, 60, 0.282);
+  background-color: rgba(219, 217, 217, 0.282);
   padding: 3rem;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .events-hero h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -62,8 +62,8 @@
 #events-section h2 { color: #ff5722; }
 #events-section h2::after { background: #ff5722; }
 
-#competitions-section h2 { color: #1565c0; }
-#competitions-section h2::after { background: #1565c0; }
+#competitions-section h2 { color: #388e3c; }
+#competitions-section h2::after { background: #388e3c; }
 
 #workshops-section h2 { color: #388e3c; }
 #workshops-section h2::after { background: #388e3c; }
