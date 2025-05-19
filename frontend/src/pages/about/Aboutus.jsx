@@ -57,19 +57,16 @@ const AboutUs = () => {
             <div className="about-image">
               <img src={aboutusimg} alt="Icon School Campus" loading="lazy" />
             </div>
-            <div className="about-content">
-              <h2 id="who-we-are">Who We Are?</h2>
-              <p>
-                Icon Nursery & Primary School is a premier educational institution dedicated to 
-                nurturing children through a balanced approach to academics, character development, 
-                and creativity. Established in 2010, we have grown into a trusted institution 
-                committed to providing a safe, joyful, and intellectually stimulating environment.
-              </p>
-              <p>
-                Welcome to ICON
-A place where the foundation for lifelong learning and personal growth begins.. Our approach is centered on personalized training, provided within a structured, positive learning environment. Our team of highly qualified, caring, and attentive educators is committed to understanding each student's unique strengths and challenges, offering tailored support to foster academic excellence and personal development. We prioritize regular monitoring of progress, ensuring that each student achieves their full potential and builds a strong foundation for future success. Beyond academics, we provide a diverse range of extracurricular activities designed to promote creativity, confidence, and collaboration, empowering students to discover their passions and develop essential life skills. At ICON, we aim to nurture well-rounded, confident individuals equipped to thrive in an ever-evolving world.
-              </p>
-            </div>
+           <div className="about-content">
+  <h2 id="who-we-are">Who We Are?</h2>
+  <p>
+    Icon Nursery & Primary School, established in 2010, is a trusted institution committed to nurturing young minds through a balanced focus on academics, character, and creativity. We provide a safe, joyful, and stimulating environment where children thrive.
+  </p>
+  <p>
+    At ICON, we offer personalized learning supported by caring, qualified educators who understand each child’s unique strengths. We ensure continuous growth through regular progress monitoring and enrich student life with extracurricular activities that foster creativity, confidence, and collaboration. ICON lays the foundation for lifelong learning and empowers students to become well-rounded individuals ready to succeed in a changing world.
+  </p>
+</div>
+
           </div>
         </div>
       </section>

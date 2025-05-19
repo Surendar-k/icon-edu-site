@@ -3,10 +3,10 @@ import './Home.css';
 import homebg from '../../assets/homebg.jpg';
 import digitalLearningImg from '../../assets/homebg.jpg';
 import safeInfrastructureImg from '../../assets/homebg.jpg';
-import transportationImg from '../../assets/homebg.jpg';
+
  // fix the spelling: environemnt → environment
 import primaryEducation from '../../assets/homebg.jpg';
-
+import transport from '../../assets/transport.jpg';
 import oldschool from '../../assets/school1.jpg';
 import experiencedteacher from "../../assets/about.jpg";
 import holistic from "../../assets/drawing.jpg";
@@ -170,7 +170,7 @@ function Home() {
       {
         title: "Transportation",
         description: "Modern fleet with GPS tracking and trained staff for secure commuting.",
-        imgSrc: transportationImg,
+        imgSrc: transport,
         alt: "Transportation",
       },
      

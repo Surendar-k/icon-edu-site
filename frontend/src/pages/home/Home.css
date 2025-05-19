@@ -352,6 +352,7 @@ body {
 .facilities-round-cards {
   display: grid;
   max-width: 1200%;
+ 
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2.8rem;
   justify-items: center;
@@ -380,8 +381,9 @@ body {
 
 /* Icon styling */
 .facility-round-icon {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
   object-fit: contain;
   margin-bottom: 1.8rem;
   filter: drop-shadow(0 5px 8px rgba(0, 121, 107, 0.35));

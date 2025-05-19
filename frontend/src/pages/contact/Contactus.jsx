@@ -1,52 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ContactUs.css';
 import { FaEnvelope, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import contactImg from '../../assets/price2.jpg';
-import emailjs from '@emailjs/browser';
 
 const Contactus = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',      // Added phone field
-    subject: '',
-    message: '',
-  });
-  const [statusMessage, setStatusMessage] = useState('');
-  const [isSending, setIsSending] = useState(false);
 
-  const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+
+const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "8cf5f43e-3acf-450d-a470-1627530f3430");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    setIsSending(true);
-    setStatusMessage('');
-
-    // Replace with your EmailJS service/template/public key
-    emailjs.send(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
-      formData,
-      'YOUR_PUBLIC_KEY'
-    )
-      .then(() => {
-        setStatusMessage('Your message has been sent successfully!');
-        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });  // reset including phone
-      })
-      .catch(() => {
-        setStatusMessage('Oops! Something went wrong. Please try again later.');
-      })
-      .finally(() => {
-        setIsSending(false);
-      });
-  };
-
   return (
     <main className="contact-page">
-      {/* Hero Section */}
       <section className="contact-hero" style={{ backgroundImage: `url(${contactImg})` }}>
         <div className="overlay">
           <h1>Contact Us</h1>
@@ -54,9 +39,7 @@ const Contactus = () => {
         </div>
       </section>
 
-      {/* Contact Info & Form Section */}
       <section className="contact-container">
-        {/* Contact Info */}
         <div className="contact-info animate-slide">
           <h2>Reach Out</h2>
           <p><strong>Main Campus:</strong><br />995A, Thendral Nagar, Vengikkal, Tiruvannamalai</p>
@@ -67,69 +50,27 @@ const Contactus = () => {
           <p><strong>Working Hours:</strong> Mon - Fri, 8:00 AM - 4:00 PM</p>
 
           <div className="social-links">
-            <a href="mailto:info@iconprimaryschool.com" className="icon-link email" title="Email">
-              <FaEnvelope />
-            </a>
-            <a href="https://wa.me/918925359941" target="_blank" rel="noopener noreferrer" className="icon-link whatsapp" title="WhatsApp">
-              <FaWhatsapp />
-            </a>
-            <a href="https://www.instagram.com/iconschooltiruvannamalai/" target="_blank" rel="noopener noreferrer" className="icon-link instagram" title="Instagram">
-              <FaInstagram />
-            </a>
+            <a href="mailto:info@iconprimaryschool.com" className="icon-link email"><FaEnvelope /></a>
+            <a href="https://wa.me/918925359941" target="_blank" rel="noopener noreferrer" className="icon-link whatsapp"><FaWhatsapp /></a>
+            <a href="https://www.instagram.com/iconschooltiruvannamalai/" target="_blank" rel="noopener noreferrer" className="icon-link instagram"><FaInstagram /></a>
           </div>
         </div>
 
-        {/* Contact Form */}
         <div className="contact-form animate-fade">
           <h2>Send Us a Message</h2>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="tel"
-              name="phone"                  // new phone input
-              placeholder="Your Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-            />
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={handleChange}
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-            <button type="submit" disabled={isSending}>
-              {isSending ? 'Sending...' : 'Send Message'}
-            </button>
+          <form onSubmit={onSubmit}>
+            <input type="text" name="name" placeholder="Your Name"  required />
+            <input type="email" name="email" placeholder="Your Email"  required />
+            <input type="tel" name="phone" placeholder="Your Phone Number"  />
+            <input type="text" name="subject" placeholder="Subject"  />
+            <textarea name="message" placeholder="Your Message" rows="5"  required></textarea>
+            <button type="submit" >Send Message</button>
           </form>
-          {statusMessage && <p className="status-message">{statusMessage}</p>}
+          <span>{result}</span>
+        
         </div>
       </section>
-
-      {/* Map Section */}
+       {/* Map Section */}
       <section className="maps-section">
         <h2>Our Locations</h2>
         <div className="maps-grid">
