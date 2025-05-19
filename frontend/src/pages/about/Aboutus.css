@@ -1,248 +1,291 @@
+/* Global Styles */
 .about {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2c3e50;
-  background-color: #fefefe;
+  color: #333;
   line-height: 1.6;
+  background-color: #fdfdfd;
 }
 
-/* HERO SECTION */
+/* Hero Section */
 .about-hero {
-  background-image: linear-gradient(
-      rgba(10, 30, 60, 0.7), 
-      rgba(10, 30, 60, 0.7)
-    ), url('../../assets/about.jpg');
-  background-size: cover;
-  background-position: center;
+  background: url('../../assets/icongrass.jpg') no-repeat center center/cover;
   height: 60vh;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
+  position: relative;
+  color: white;
+  text-align: center;
 }
 
-.about-hero .overlay {
-  text-align: center;
-  color: #e0e7ff;
-  max-width: 900px;
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  width: 100%;
+  font-family:cursive;
+  font-size:xx-large;
 }
 
 .about-hero h1 {
-  font-size: 3.5rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  text-shadow: 1px 2px 6px rgba(0,0,0,0.7);
 }
 
 .about-hero p {
-  font-size: 1.4rem;
-  font-weight: 500;
-  max-width: 700px;
-  margin: 0 auto;
-  text-shadow: 1px 2px 6px rgba(0,0,0,0.5);
+  font-size: 1.2rem;
 }
 
-/* MAIN CONTENT */
-.about-section {
-  padding: 5rem 2rem;
+/* Container */
+.container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem 1rem;
+}
+/* Mission & Vision */
+.mission-vision-section {
+  background-color: #f9fcff;
+  padding: 3rem 1rem;
+}
+
+.mission-vision-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Horizontal padding */
+}
+
+.mission-vision-grid {
   display: flex;
-  gap: 3rem;
-  flex-wrap: wrap;
+  justify-content: center; /* Center the items */
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+.mission-box,
+.vision-box {
+  flex: 0 0 48%;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 300px;
+}
+
+.mission-box:hover,
+.vision-box:hover {
+  transform: translateY(-5px);
+}
+
+.icon-wrapper {
+  background-color: #e0f0ff;
+  padding: 0.75rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: flex;
   align-items: center;
-  border-bottom: 1px solid #dbe9fb;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #0b3d91;
+}
+
+.mission-box h2,
+.vision-box h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  color: #0b3d91;
+}
+
+.mission-box p,
+.vision-box p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .mission-vision-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .mission-box,
+  .vision-box {
+    flex: 1 1 100%;
+  }
+}
+
+/* About Section */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
 }
 
 .about-image img {
   width: 100%;
-  max-width: 520px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  filter: grayscale(10%) brightness(95%);
-  transition: filter 0.3s ease;
+  border-radius: 10px;
 }
 
-.about-image img:hover {
-  filter: grayscale(0%) brightness(100%);
+.about-content h2 {
+  margin-bottom: 1rem;
 }
-
-.about-info {
-  flex: 1;
-  min-width: 320px;
-}
-
-.about-info h2 {
-  color: #045a8d;
-  margin-top: 1.5rem;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  border-left: 4px solid #0277bd;
-  padding-left: 12px;
-}
-
-.about-info p {
-  font-size: 1.15rem;
-  margin-top: 0.75rem;
-  color: #444;
-  line-height: 1.75;
-}
-
-/* VALUES SECTION */
+/* Core Values Section */
 .values-section {
-  background-color: #f7fbff;
-  padding: 4.5rem 2rem;
-}
-
-.values-container {
-  max-width: 1000px;
-  margin: 0 auto;
+  background-color: #f0f8ff;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
-.values-container h2 {
-  font-size: 2.4rem;
-  margin-bottom: 2.25rem;
-  color: #0366d6;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+.section-title {
+  font-size: 2rem;
+  color: #0d47a1;
+  margin-bottom: 2rem;
 }
 
-.values-container ul {
-  text-align: left;
-  list-style: none;
-  padding-left: 2rem;
-  max-width: 600px;
-  margin: 0 auto;
+.values-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: row;
 }
 
-.values-container li {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 1.3rem;
-  font-size: 1.2rem;
-  color: #2a3f60;
-  line-height: 1.7;
-  font-weight: 500;
+.value-card {
+  flex: 1;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+  min-width: 0;
 }
 
-.values-container li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0.25rem;
-  color: #0277bd;
-  font-weight: 900;
-  font-size: 1.2rem;
-  line-height: 1;
+
+.value-card:hover {
+  transform: translateY(-5px);
 }
-/* Top Image */
-.about-top-image img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  display: block;
+
+.value-icon {
+  margin-bottom: 1rem;
+}
+
+.value-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Facilities Section */
+.facilities-section {
+  padding: 2rem 0;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.facility-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.facility-icon {
+  font-size: 2rem;
+  color: #43a047;
+  margin-bottom: 0.5rem;
+}
+
+/* Achievements Section */
+.achievements-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.achievement-item {
+  background-color: #fdf6e3;
+  padding: 1rem;
+  border-left: 4px solid #ffb300;
+  border-radius: 4px;
+}
+
+.achievement-year {
+  font-weight: bold;
+  color: #e65100;
+}
+
+.achievement-content h3 {
+  margin: 0.5rem 0 0.2rem;
 }
 
 /* Leadership Section */
-.leadership-section {
-  background-color: #e9f1fa;
-  padding: 3rem 1.5rem;
-  text-align: center;
+.leadership-team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
 }
 
-.leadership-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  gap: 4rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.leader-card {
-  background: #fff;
-  border-radius: 10px;
+.leader-profile {
+  background-color: #fff;
   padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 200px;
-  transition: transform 0.3s ease;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
 }
 
-.leader-card:hover {
-  transform: translateY(-8px);
-}
-
-.leader-card img {
+.leader-image img {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
   object-fit: cover;
+  border-radius: 50%;
   margin-bottom: 1rem;
-  border: 3px solid #0277bd;
 }
 
-.leader-card h3 {
-  margin: 0.5rem 0 0.25rem;
-  color: #01579b;
-  font-weight: 700;
-  font-size: 1.25rem;
+.leader-title {
+  font-weight: bold;
+  color: #0d47a1;
 }
 
-.leader-card p {
-  margin: 0;
-  font-size: 1rem;
+.leader-bio {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
   color: #555;
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-  .leadership-container {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 768px) {
+  .mission-vision-grid,
+  .about-grid,
+  .leadership-team {
+    grid-template-columns: 1fr;
   }
-}
 
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .about-section {
-    flex-direction: column;
-    padding: 3rem 1rem;
+  .about-hero {
+    height: 50vh;
+    padding: 1rem;
   }
 
   .about-hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .about-hero p {
-    font-size: 1.1rem;
-  }
-
-  .about-info h2 {
-    font-size: 1.6rem;
-    border-left-width: 3px;
-    padding-left: 10px;
-  }
-
-  .values-container h2 {
     font-size: 1.8rem;
   }
 
-  .values-container ul {
-    padding-left: 1rem;
-  }
-
-  .values-container li {
-    font-size: 1.05rem;
-    padding-left: 1.5rem;
-  }
-
-  .values-container li::before {
+  .about-hero p {
     font-size: 1rem;
-    top: 0.3rem;
   }
 }

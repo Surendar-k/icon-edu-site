@@ -4,14 +4,13 @@ import homebg from '../../assets/homebg.jpg';
 import digitalLearningImg from '../../assets/homebg.jpg';
 import safeInfrastructureImg from '../../assets/homebg.jpg';
 import transportationImg from '../../assets/homebg.jpg';
-import wellnessCenterImg from '../../assets/homebg.jpg';  // Adjust path accordingly
+
 import environment from '../../assets/homebg.jpg';  // fix the spelling: environemnt → environment
 import primaryEducation from '../../assets/homebg.jpg';
-import activityLearning from '../../assets/homebg.jpg';
-import creativeExpression from '../../assets/homebg.jpg';
 
+import oldschool from '../../assets/school1.jpg';
 import experiencedteacher from "../../assets/price2.jpg";
-import holistic from "../../assets/homebg.jpg";
+import holistic from "../../assets/drawing.jpg";
 import environemnt from "../../assets/homebg.jpg";
 
 function Home() {
@@ -85,7 +84,7 @@ function Home() {
   ref={sectionRefs.highlights}
   aria-labelledby="why-choose-us-title"
 >
-  <h2 id="why-choose-us-title">Why Choose Us</h2>
+  <h2 id="why-choose-us-title">Why Choose Us?</h2>
 
   <div className="cards">
     <div className="card orange fade-in">
@@ -120,33 +119,23 @@ function Home() {
   ref={sectionRefs.programs}
   aria-labelledby="our-programs-title"
 >
-  <h2 id="our-programs-title">Educational Programs</h2>
+<h2 id="our-programs-title">Educational Programs</h2>
   <div className="programs-list">
+        
     {[
       {
         title: "Early Years",
         description: "Pre-KG, LKG, and UKG with developmentally appropriate activities",
-        imgSrc: environment,
+        imgSrc: oldschool,
         alt: "Early Years",
       },
       {
         title: "Primary Education",
-        description: "Grades 1-5 with CBSE-aligned curriculum emphasizing conceptual understanding",
+        description: "Grades 1-5 with ICSE curriculum emphasizing conceptual understanding",
         imgSrc: primaryEducation,
         alt: "Primary Education",
       },
-      {
-        title: "Activity-Based Learning",
-        description: "Interactive sessions promoting critical thinking and problem-solving",
-        imgSrc: activityLearning,
-        alt: "Activity-Based Learning",
-      },
-      {
-        title: "Creative Expression",
-        description: "Dedicated programs for arts, music, dance, and sports",
-        imgSrc: creativeExpression,
-        alt: "Creative Expression",
-      },
+      
     ].map(({ title, description, imgSrc, alt }, i) => (
       <div key={i} className="program-card">
         <img src={imgSrc} alt={alt} className="program-image" />
@@ -185,12 +174,7 @@ function Home() {
         imgSrc: transportationImg,
         alt: "Transportation",
       },
-      {
-        title: "Wellness Center",
-        description: "Regular health check-ups and nutrition guidance for overall wellbeing.",
-        imgSrc: wellnessCenterImg,
-        alt: "Wellness Center",
-      }
+     
     ].map(({ title, description, imgSrc, alt }, i) => (
       <div key={i} className="facility-round-card">
         <img src={imgSrc} alt={alt} className="facility-round-icon" />
@@ -210,9 +194,7 @@ function Home() {
             <a href="/contact" className="btn primary-btn" aria-label="Contact the school for admission">
               Schedule a Visit
             </a>
-            <a href="/admission" className="btn secondary-btn" aria-label="Apply for admission">
-              Apply Now
-            </a>
+            
           </div>
         </div>
       </section>
