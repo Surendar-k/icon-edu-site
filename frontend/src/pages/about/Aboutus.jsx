@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutUs.css';
-import aboutImg from '../../assets/icongrass.jpg';
-import principalImg from '../../assets/logo.jpg';
+
+import principalImg from '../../assets/principal.jpg';
 import correspondentImg from '../../assets/logo.jpg';
 import growthIcon from '../../assets/growthicon.png';
 import environmentIcon from '../../assets/environment.png';
@@ -9,6 +9,7 @@ import curriculumIcon from '../../assets/curriculum.png';
 import extracurricularIcon from '../../assets/extracurricular.png';
 import staffIcon from '../../assets/staff.png';
 import { FaBullseye, FaEye } from "react-icons/fa";
+import aboutusimg from '../../assets/award.jpg'
 
 const AboutUs = () => {
   return (
@@ -16,8 +17,10 @@ const AboutUs = () => {
       {/* Hero Section */}
       <section className="about-hero" aria-label="About Us Introduction">
         <div className="overlay">
-          <h1>About Icon Nursery & Primary School</h1>
-          <p>"Education is the seed from which the tree of knowledge grows"</p>
+          <h1>About Us</h1>
+          
+         
+          <h5>"Education is the seed from which the tree of knowledge grows"</h5>
         </div>
       </section>
       {/*mission and vision*/}
@@ -52,7 +55,7 @@ const AboutUs = () => {
         <div className="container">
           <div className="about-grid">
             <div className="about-image">
-              <img src={aboutImg} alt="Icon School Campus" loading="lazy" />
+              <img src={aboutusimg} alt="Icon School Campus" loading="lazy" />
             </div>
             <div className="about-content">
               <h2 id="who-we-are">Who We Are?</h2>
@@ -182,7 +185,7 @@ A place where the foundation for lifelong learning and personal growth begins.. 
           <div className="leadership-team">
             <div className="leader-profile">
               <div className="leader-image">
-                <img src={principalImg} alt="Mrs. Jane Doe - Principal" loading="lazy" />
+                <img src={correspondentImg} alt="Mrs. Jane Doe - Principal" loading="lazy" />
               </div>
               <div className="leader-info">
                 <h3>Mr. S Arivumani Samson</h3>
@@ -192,7 +195,7 @@ A place where the foundation for lifelong learning and personal growth begins.. 
             </div>
             <div className="leader-profile">
               <div className="leader-image">
-                <img src={correspondentImg} alt="Mr. John Smith - Correspondent" loading="lazy" />
+                <img src={principalImg} alt="Mr. John Smith - Correspondent" loading="lazy" />
               </div>
               <div className="leader-info">
                 <h3>Mrs. T Devachinthamani </h3>

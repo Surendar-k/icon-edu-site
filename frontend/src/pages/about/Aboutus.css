@@ -19,11 +19,11 @@
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(63, 60, 60, 0.282);
   padding: 2rem;
   width: 100%;
   font-family:cursive;
-  font-size:xx-large;
+  font-size:x-large;
 }
 
 .about-hero h1 {
@@ -130,12 +130,19 @@
 }
 
 .about-image img {
-  width: 100%;
+  width: 90vh;
   border-radius: 10px;
+  height: 70vh;
+  
 }
 
 .about-content h2 {
   margin-bottom: 1rem;
+  font-family: cursive;
+}
+.about-content p{
+  font-family: cursive;
+ 
 }
 /* Core Values Section */
 .values-section {

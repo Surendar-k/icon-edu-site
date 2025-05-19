@@ -4,12 +4,11 @@ import homebg from '../../assets/homebg.jpg';
 import digitalLearningImg from '../../assets/homebg.jpg';
 import safeInfrastructureImg from '../../assets/homebg.jpg';
 import transportationImg from '../../assets/homebg.jpg';
-
-import environment from '../../assets/homebg.jpg';  // fix the spelling: environemnt → environment
+ // fix the spelling: environemnt → environment
 import primaryEducation from '../../assets/homebg.jpg';
 
 import oldschool from '../../assets/school1.jpg';
-import experiencedteacher from "../../assets/price2.jpg";
+import experiencedteacher from "../../assets/about.jpg";
 import holistic from "../../assets/drawing.jpg";
 import environemnt from "../../assets/homebg.jpg";
 
