@@ -34,7 +34,7 @@ const [result, setResult] = React.useState("");
     <main className="contact-page">
      <section
   className="contact-hero"
-  style={{ backgroundImage: `url(${contactImg})` }}   /* if using import */
+  style={{ backgroundImage: `url(${contactImg})` }}   
 >
   <div className="overlay">
     <h1>Contact&nbsp;Us</h1>
