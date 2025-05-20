@@ -35,12 +35,14 @@ body {
   height: 100%;
   background-color: rgba(66, 66, 66, 0.4); /* Light black overlay */
   z-index: 1;
+  
 }
 
 /* Ensure content is above the overlay */
 .hero-content {
   position: relative;
   z-index: 2;
+  font-style: italic;
 }
 
 .hero-content h1 {

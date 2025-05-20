@@ -26,6 +26,7 @@
   width: 100%;
   font-family: cursive;
   font-size: x-large;
+  font-style: italic;
 }
 
 .about-hero h1 {
@@ -66,6 +67,14 @@
     font-size: 1rem;
     margin: 0;
   }
+  #para1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+  }
+  #para2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+  }
 }
 
 /* Container */
@@ -73,10 +82,12 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  font-style: italic;
   
 }
 .container h2{
   color: rgb(255, 3, 3);
+  
 }
 
 
@@ -84,6 +95,7 @@
 .mission-vision-section {
   background-color: #f9fcff;
   padding: 3rem 1rem;
+  
 }
 
 .mission-vision-container {
@@ -240,6 +252,7 @@
   text-align: center;
   border: 1px solid #ddd;
   transition: transform 0.3s ease;
+  font-style: italic;
 }
 
 .value-card:hover {
@@ -276,12 +289,14 @@
   color: rgb(42, 54, 165);
   padding: 1rem;
   text-align: center;
+  font-style: italic;
 }
 
 .facility-icon {
   font-size: 2rem;
   color: #43a047;
   margin-bottom: 0.5rem;
+  
 }
 
 /* Achievements Section */
@@ -307,6 +322,7 @@
 .achievement-content h3 {
   margin: 0.5rem 0 0.2rem;
   color: #8a0c0c;
+  font-style: italic;
 }
 
 /* Leadership Section */

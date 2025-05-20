@@ -52,6 +52,7 @@ html, body {
   background-color:  rgba(63, 60, 60, 0.282);;
   max-width: 1900px;
   padding: 2.5rem 2rem;
+  font-style: italic;
 }
 
 .contact-hero h1 {
