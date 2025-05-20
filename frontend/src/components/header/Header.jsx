@@ -7,7 +7,7 @@ function Header() {
     <header className="header">
       <div className="logo-container">
         <a href="/">
-        <img src={logo} alt="School Logo" className="logo" />
+        <img src={logo} alt="School Logo" className="logo" id="logo" />
         </a>
         <h1 className="school-name">Icon Nursery & Primary School</h1>
       </div>
