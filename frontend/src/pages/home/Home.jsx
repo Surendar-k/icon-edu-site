@@ -10,7 +10,7 @@ import transport from '../../assets/transport.jpg';
 import oldschool from '../../assets/school1.jpg';
 import experiencedteacher from "../../assets/about.jpg";
 import holistic from "../../assets/drawing.jpg";
-import environment from "../../assets/homebg.jpg";
+import environment from "../../assets/class.jpg";
 
 function Home() {
   // Refs for scroll animations
