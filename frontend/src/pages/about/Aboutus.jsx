@@ -2,7 +2,7 @@ import React from 'react';
 import './AboutUs.css';
 
 import principalImg from '../../assets/principal.jpg';
-import correspondentImg from '../../assets/logo.jpg';
+import correspondentImg from '../../assets/correspondant.jpg';
 import growthIcon from '../../assets/growthicon.png';
 import environmentIcon from '../../assets/environment.png';
 import curriculumIcon from '../../assets/curriculum.png';
