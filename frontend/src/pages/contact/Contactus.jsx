@@ -64,6 +64,11 @@ const [result, setResult] = React.useState("");
         <div className="contact-form animate-fade">
           <h2>Send Us a Message</h2>
           <form onSubmit={onSubmit}>
+            <input
+    type="hidden"
+    name="access_key"
+    value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY}
+  />
             <input type="text" name="name" placeholder="Your Name"  required />
             <input type="email" name="email" placeholder="Your Email"  required />
             <input type="tel" name="phone" placeholder="Your Phone Number"  />
