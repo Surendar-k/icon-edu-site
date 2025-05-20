@@ -2,7 +2,7 @@ import React from 'react';
 import './ContactUs.css';
 import { FaEnvelope, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import contactImg from '../../assets/contactus.jpg';
-
+import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 const Contactus = () => {
 
 
@@ -13,7 +13,7 @@ const [result, setResult] = React.useState("");
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+  
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
