@@ -90,7 +90,7 @@ function Home() {
       <div className="card-icon">
         <img src={experiencedteacher} alt="Quality Education" />
       </div>
-      <h3>Experienced Staff</h3>
+      <h3>Experienced Staffs</h3>
       <p>Our faculty brings years of experience and personalized care to every child.</p>
     </div>
 
