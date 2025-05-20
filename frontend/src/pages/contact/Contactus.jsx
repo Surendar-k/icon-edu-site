@@ -46,7 +46,7 @@ const [result, setResult] = React.useState("");
       <section className="contact-container">
         <div className="contact-info animate-slide">
           <h2>Reach Out</h2>
-          <p><strong>Main Campus:</strong><br />Rathna Garden, Avalurpet Road, Tiruvannamalai - 606 604</p>
+          <p><strong>Main Campus:</strong><br />Rathna Garden, Iyappan Nagar, Avalurpet Road, Tiruvannamalai - 606 604</p>
           <p><strong>Branch Address:</strong><br />995A, Thendral Nagar, Vengikkal, Tiruvannamalai - 606 604</p>
 
           <p><strong>Phone 1:</strong> <a href="tel:+918925359941">+91 89253 59941</a></p>

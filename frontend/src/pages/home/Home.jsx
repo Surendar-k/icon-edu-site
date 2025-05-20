@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './Home.css';
-import homebg from '../../assets/homebg.jpg';
-import digitalLearningImg from '../../assets/digitallearning.png';
+
+import digitalLearningImg from '../../assets/digitallearning.jpeg';
 import safeInfrastructureImg from '../../assets/infrastructure.jpg';
 
  // fix the spelling: environemnt → environment
@@ -10,7 +10,7 @@ import transport from '../../assets/transport.jpg';
 import oldschool from '../../assets/school1.jpg';
 import experiencedteacher from "../../assets/about.jpg";
 import holistic from "../../assets/drawing.jpg";
-import environemnt from "../../assets/homebg.jpg";
+import environment from "../../assets/homebg.jpg";
 
 function Home() {
   // Refs for scroll animations
@@ -63,7 +63,7 @@ function Home() {
       {/* HERO SECTION */}
       <section
         className="hero-section"
-        style={{ backgroundImage: `url(${homebg})` }}
+        style={{ backgroundImage: `url(${oldschool})` }}
         aria-label="Welcome hero banner"
       >
         <div className="hero-content">
@@ -90,8 +90,8 @@ function Home() {
       <div className="card-icon">
         <img src={experiencedteacher} alt="Quality Education" />
       </div>
-      <h3>Experienced Teachers</h3>
-      <p>Our faculty brings years of teaching experience and personalized care to every child.</p>
+      <h3>Experienced Staff</h3>
+      <p>Our faculty brings years of experience and personalized care to every child.</p>
     </div>
 
     <div className="card violet fade-in">
@@ -104,7 +104,7 @@ function Home() {
 
     <div className="card green fade-in">
       <div className="card-icon">
-        <img src={environemnt}alt="Safe Campus" />
+        <img src={environment}alt="Safe Campus" />
       </div>
       <h3>Safe Environment</h3>
       <p>We prioritize safety, hygiene, and well-being at every level of school life.</p>
