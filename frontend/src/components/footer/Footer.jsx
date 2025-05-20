@@ -1,11 +1,18 @@
 import React from 'react';
 import { FaEnvelope, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import './Footer.css';
+import logo from '../../assets/logo.jpg'; // adjust the path if needed
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
+<div className="footer-section ">
+  <a href="/" className="logo-link">
+    <img src={logo} alt="School Logo" className="footer-logo" />
+    <p className="logo-text">Intellectual Centre for Optimal Nurture</p>
+  </a>
+</div>
 
         {/* Quick Links */}
         <div className="footer-section quick-links">

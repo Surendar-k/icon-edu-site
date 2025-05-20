@@ -8,7 +8,7 @@ import artandcraft from '../../assets/artandcraft.jpg';
 import drawing from '../../assets/drawing.jpg';
 import fancydresscompetition from '../../assets/fancydresscompetition.jpg'
 import speechcompetition from '../../assets/speechcompetition.jpg';
-import rhymes from '../../assets/rhymes.jpg';
+import yoga from '../../assets/yoga.jpg';
 import thirukkural from '../../assets/thirukkural.jpg';
 import quiz from '../../assets/quiz.jpg';
 import './Event.css';
@@ -97,10 +97,10 @@ const competitions = [
   },
 {
   id: 6,
-  title: 'Rhymes Reciting',
+  title: 'Yoga Competition',
   date: 'January 15, 2025',
-  description: 'A delightful event for young children to build confidence and improve memory by reciting their favorite rhymes with expression and clarity.',
-  image: rhymes
+  description: 'A fun and engaging yoga competition designed to promote flexibility, focus, and physical well-being among children while encouraging healthy habits from a young age.',
+  image: yoga
 }
 
 ];
@@ -114,7 +114,7 @@ function Events() {
       <section className="events-hero">
         <div className="overlay">
           <h1>Our School Highlights</h1>
-          <p>Exploring excellence through Events, Competitions, and Workshops.</p>
+          <p>Exploring excellence through Events and Competitions.</p>
         </div>
       </section>
 

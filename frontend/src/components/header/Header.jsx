@@ -6,7 +6,9 @@ function Header() {
   return (
     <header className="header">
       <div className="logo-container">
+        <a href="/">
         <img src={logo} alt="School Logo" className="logo" />
+        </a>
         <h1 className="school-name">Icon Nursery & Primary School</h1>
       </div>
       <nav className="nav-links">
