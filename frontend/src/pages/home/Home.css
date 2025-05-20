@@ -55,12 +55,42 @@ body {
 
 .learn-more-btn {
   padding: 12px 24px;
-  background-color: #ff6f61;
-  color: white;
+  background-color: #ff311e;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
   font-size: 1.2rem;
+}
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content h1,
+.hero-content p,
+.learn-more-btn {
+  opacity: 0; /* Start hidden */
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+
+/* Delay each element for a nice staggered entrance */
+.hero-content h1 {
+  animation-delay: 0.3s;
+}
+
+.hero-content p {
+  animation-delay: 0.6s;
+}
+
+.learn-more-btn {
+  animation-delay: 0.9s;
 }
 
 .learn-more-btn:hover {
@@ -92,7 +122,7 @@ body {
 /* Card Design */
 .card {
   border-radius: 20px;
-  padding: 10px 35px 50px;
+  padding: 10px 25px 50px;
   width: 300px;
   height: 450px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;

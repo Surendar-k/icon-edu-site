@@ -17,7 +17,7 @@
   text-align: center;
   margin: 0 auto 2rem;
   color: #ffffff;
-  animation: fadeIn 1s ease-in-out;
+  
 }
 
 .events-hero .overlay {
@@ -173,22 +173,6 @@
   margin: 0;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @media (max-width: 768px) {
   .events-hero {
     min-height: 30vh;

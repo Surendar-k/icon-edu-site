@@ -59,10 +59,10 @@ const AboutUs = () => {
             </div>
            <div className="about-content">
   <h2 id="who-we-are">Who We Are?</h2>
-  <p>
+  <p id='para1'>
     Icon Nursery & Primary School, established in 2015, is a trusted institution committed to nurturing young minds through a balanced focus on academics, character, and creativity. We provide a safe, joyful, and stimulating environment where children thrive.
   </p>
-  <p>
+  <p id='para2'>
     At ICON, we offer personalized learning supported by caring, qualified educators who understand each child’s unique strengths. We ensure continuous growth through regular progress monitoring and enrich student life with extracurricular activities that foster creativity, confidence, and collaboration. ICON lays the foundation for lifelong learning and empowers students to become well-rounded individuals ready to succeed in a changing world.
   </p>
 </div>
@@ -187,7 +187,7 @@ const AboutUs = () => {
               <div className="leader-info">
                 <h3>Mr. S Arivumani Samson</h3>
                 <p className="leader-title">Correspondent</p>
-                <p className="leader-bio">M.E, PhD </p>
+                <p className="leader-bio">M.E </p>
               </div>
             </div>
             <div className="leader-profile">

@@ -1,37 +1,134 @@
 .footer {
-    background-color: #000; /* black background */
-    color: #fff;
-    padding: 16px 20px;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
-  }
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  color: #e0e0e0;
+  padding: 5px 5px 5px ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
+  border-top: 3px solid #d66808;
+  text-align: left;
   
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1 1 280px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: #d66808;
+}
+
+.footer-section a {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover,
+.footer-section a:focus {
+  color: #fff;
+  outline: none;
+}
+
+/* Social Links Container */
+.social-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.social-links a{
+  font-size:xx-large;
+  
+}
+
+/* Icon link styles */
+.icon-link {
+  color: #d66808;
+  font-size: 1.8rem;
+  background-color: #333;
+  padding: 3px 6px 10px;
+  border-radius: 6px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.icon-link:hover,
+.icon-link:focus {
+  background-color: #b45406;
+  color: #fff;
+  outline: none;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 10px;
+}
+/* Keep heading styling the same */
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: #d66808;
+}
+
+/* Flex row only for links */
+.quick-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Links style */
+.quick-links-row a {
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom: 0;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.quick-links-row a:hover,
+.quick-links-row a:focus {
+  color: #fff;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
   }
-  
-  .footer-text {
-    font-size: 0.9rem;
-    margin-bottom: 8px;
+
+  .footer-section {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
   }
-  
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  
-  .footer-links a {
-    color: #d66808;
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-links a:hover {
-    color: #b403fa;
-  }
-  
+}

@@ -56,7 +56,7 @@ const [result, setResult] = React.useState("");
 
           <div className="social-links">
             <a href="mailto:iconschooltiruvannamalai@gmail.com" className="icon-link email"><FaEnvelope /></a>
-            <a href="https://wa.me/918925359941" target="_blank" rel="noopener noreferrer" className="icon-link whatsapp"><FaWhatsapp /></a>
+            <a href="https://wa.me/919789064951" target="_blank" rel="noopener noreferrer" className="icon-link whatsapp"><FaWhatsapp /></a>
             <a href="https://www.instagram.com/iconschooltiruvannamalai/" target="_blank" rel="noopener noreferrer" className="icon-link instagram"><FaInstagram /></a>
           </div>
         </div>

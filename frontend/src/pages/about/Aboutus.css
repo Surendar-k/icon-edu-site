@@ -72,7 +72,12 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  
 }
+.container h2{
+  color: rgb(255, 3, 3);
+}
+
 
 /* Mission & Vision */
 .mission-vision-section {
@@ -105,6 +110,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  color: darkslategrey;
 }
 
 .mission-box:hover,
@@ -121,6 +127,7 @@
   align-items: center;
   justify-content: center;
 }
+
 
 .icon {
   font-size: 2rem;
@@ -222,6 +229,7 @@
   flex: 1 1 250px;
   background: white;
   padding: 1rem;
+  color: brown;
   border-radius: 8px;
   text-align: center;
   border: 1px solid #ddd;
@@ -234,7 +242,9 @@
 
 .value-icon {
   margin-bottom: 1rem;
+  
 }
+
 
 .value-icon img {
   width: 60px;
@@ -257,6 +267,7 @@
   background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
+  color: rgb(42, 54, 165);
   padding: 1rem;
   text-align: center;
 }
@@ -289,6 +300,7 @@
 
 .achievement-content h3 {
   margin: 0.5rem 0 0.2rem;
+  color: #8a0c0c;
 }
 
 /* Leadership Section */
@@ -300,7 +312,7 @@
 }
 
 .leader-profile {
-  background-color: #fff;
+  background-color:#f3f7ff;
   padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
