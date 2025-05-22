@@ -130,7 +130,7 @@ function Home() {
       },
       {
         title: "Primary Education",
-        description: "Grades 1-5 with ICSE curriculum emphasizing conceptual understanding",
+        description: "Grades 1-5 with comprehensive curriculum emphasizing conceptual understanding",
         imgSrc: primaryEducation,
         alt: "Primary Education",
       },
