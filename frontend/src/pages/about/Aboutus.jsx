@@ -2,7 +2,7 @@ import React from 'react';
 import './AboutUs.css';
 
 import principalImg from '../../assets/principal.jpg';
-import correspondentImg from '../../assets/correspondant.jpg';
+// import correspondentImg from '../../assets/correspondant.jpg';
 import growthIcon from '../../assets/growthicon.png';
 import environmentIcon from '../../assets/environment.png';
 import curriculumIcon from '../../assets/curriculum.png';
@@ -10,7 +10,7 @@ import extracurricularIcon from '../../assets/extracurricular.png';
 import staffIcon from '../../assets/staff.png';
 import { FaBullseye, FaEye } from "react-icons/fa";
 import aboutusimg from '../../assets/award.jpg'
-
+import samsungsir from '../../assets/samsungsir.jpg';
 const AboutUs = () => {
   return (
     <main className="about">
@@ -182,7 +182,7 @@ const AboutUs = () => {
           <div className="leadership-team">
             <div className="leader-profile">
               <div className="leader-image">
-                <img src={correspondentImg} alt="Mrs. Jane Doe - Principal" loading="lazy" />
+                <img src={samsungsir} alt="Mr. S Arivumani Samson - Correspondent" loading="lazy" />
               </div>
               <div className="leader-info">
                 <h3>Mr. S Arivumani Samson</h3>
@@ -192,7 +192,7 @@ const AboutUs = () => {
             </div>
             <div className="leader-profile">
               <div className="leader-image">
-                <img src={principalImg} alt="Mr. John Smith - Correspondent" loading="lazy" />
+                <img src={principalImg} alt="Mrs. T Devachinthamani - Principal" loading="lazy" />
               </div>
               <div className="leader-info">
                 <h3>Mrs. T Devachinthamani </h3>
