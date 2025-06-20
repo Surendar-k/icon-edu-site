@@ -91,12 +91,20 @@ const [result, setResult] = React.useState("");
         <div className="maps-grid">
           <div className="map-container">
             <h4>Main Campus</h4>
-             <iframe
-              title="Branch Campus - Rathna Garden"
-             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.9270119893753!2d78.94779771484139!3d11.708906791952098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bab6667e4706961%3A0x5115637eec4df30!2sRathna%20Gardens%2C%20Avalurpet%20Rd%2C%20Iyyappan%20Nagar%2C%20Tiruvannamalai%2C%20Tamil%20Nadu%20606604!5e0!3m2!1sen!2sin!4v1691052300000"
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
+          
+      <iframe
+  src="https://maps.google.com/maps?q=12.254999,79.077492&z=15&output=embed"
+  width="100%"
+  height="450"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+
+
+
+
           </div>
           <div className="map-container">
             <h4>Branch Campus</h4>
