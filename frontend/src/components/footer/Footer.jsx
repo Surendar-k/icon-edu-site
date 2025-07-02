@@ -63,6 +63,17 @@ const Footer = () => {
           <p className="footer-text">
             © {new Date().getFullYear()} Icon Nursery & Primary School. All rights reserved.
           </p>
+          <p className="footer-text">
+    Designed & Developed by{" "}
+    <a
+      href="https://surendar-k.web.app/" // Replace with your actual profile
+      target="_blank"
+      rel="noopener noreferrer"
+      className="footer-link"
+    >
+      Surendar K
+    </a>
+  </p>
         </div>
       </div>
     </footer>
